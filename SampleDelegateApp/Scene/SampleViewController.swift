@@ -61,6 +61,8 @@ final class SampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .white
+        
         self.view.addSubview(scrollView)
         
         // scrollViewの四隅をviewのsafeAreaに合わせる制約を貼る
@@ -109,7 +111,6 @@ extension SampleViewController: WKNavigationDelegate {
         print("ローディング")
     }
 }
-
 
 #Preview {
     SampleViewController()
