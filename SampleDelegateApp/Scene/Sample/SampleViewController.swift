@@ -44,6 +44,7 @@ final class SampleViewController: UIViewController {
     private lazy var textView: UITextView = {
         let textView = UITextView()
         textView.delegate = self
+        textView.contentInset = .init(top: 8, left: 8, bottom: 8, right: 8)
         textView.apply(constraint: textView.heightAnchor.constraint(equalToConstant: 300))
         textView.border(width: 1, color: .black, cornerRadius: 16)
         return textView
@@ -61,7 +62,7 @@ final class SampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemBackground
         
         self.view.addSubview(scrollView)
         
